@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* Define your brand tokens as CSS variables */
+  --color-ui-primary: #2563eb;
+  --color-ui-primary-foreground: #ffffff;
+  --color-ui-background: #ffffff;
+  --color-ui-foreground: #020817;
+  --color-ui-border: #e2e8f0;
+  
+  /* Radii */
+  --radius-ui-lg: 0.5rem;
+  --radius-ui-md: calc(0.5rem - 2px);
+  --radius-ui-sm: calc(0.5rem - 4px);
+
+  /* Animations (Native v4 supports these directly) */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+}
+
+/* User-level overrides (Global Customization) */
+:root {
+  --ui-primary: var(--color-ui-primary);
+}
+
+.dark {
+  --color-ui-background: #020817;
+  --color-ui-foreground: #ffffff;
+}
