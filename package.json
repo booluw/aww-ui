@@ -1,16 +1,16 @@
 {
-  "name": "lego-ui",
+  "name": "aww-ui",
   "version": "0.0.1",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/lego-ui.umd.cjs",
-  "module": "./dist/lego-ui.js",
+  "main": "./dist/aww-ui.umd.cjs",
+  "module": "./dist/aww-ui.js",
   "exports": {
     ".": {
-      "import": "./dist/lego-ui.js",
-      "require": "./dist/lego-ui.umd.cjs"
+      "import": "./dist/aww-ui.js",
+      "require": "./dist/aww-ui.umd.cjs"
     },
     "./style.css": "./dist/style.css"
   },

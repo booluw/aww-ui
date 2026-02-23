@@ -11,8 +11,8 @@ export default defineConfig({
     lib: {
       // The entry point for your library
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'LegoUI',
-      fileName: 'lego-ui'
+      name: 'AwwUI',
+      fileName: 'aww-ui'
     },
     rollupOptions: {
       // Ensure Vue and Reka aren't bundled into your library

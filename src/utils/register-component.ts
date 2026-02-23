@@ -1,6 +1,6 @@
 import type { App, Component } from 'vue';
 
-export function createInstaller(components: Record<string, Component>, prefix = 'L') {
+export function createInstaller(components: Record<string, Component>, prefix = 'A') {
   return {
     install(app: App) {
       Object.entries(components).forEach(([name, component]) => {

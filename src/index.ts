@@ -7,5 +7,5 @@ const components = {
   Button
 }
 
-export const LegoUI = createInstaller(components)
-export default LegoUI
+export const AwwUI = createInstaller(components)
+export default AwwUI
