@@ -6,8 +6,9 @@ const meta: Meta<typeof MyButton> = {
   component: MyButton,
   tags: ['autodocs'], // Generates documentation page automatically
   argTypes: {
-    variant: { control: 'select', options: ['primary', 'outline'] },
-    size: { control: 'select', options: ['sm', 'md'] },
+    variant: { control: 'select', options: ['primary', 'secondary', 'subtle', 'transparent', 'outline'] },
+    size: { control: 'select', options: ['sm', 'md', 'lg'] },
+    disabled: { control: 'boolean' }
   },
 };
 
