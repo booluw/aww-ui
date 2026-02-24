@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
-import MyButton from './Button.vue';
+import AButton from './Button.vue';
 
-const meta: Meta<typeof MyButton> = {
-  title: 'Components/Button',
-  component: MyButton,
+const meta: Meta<typeof AButton> = {
+  title: 'AwwUI/Button',
+  component: AButton,
   tags: ['autodocs'], // Generates documentation page automatically
   argTypes: {
     variant: { control: 'select', options: ['primary', 'secondary', 'subtle', 'transparent', 'outline'] },
@@ -13,12 +13,8 @@ const meta: Meta<typeof MyButton> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof MyButton>;
+type Story = StoryObj<typeof AButton>;
 
 export const Primary: Story = {
   args: { variant: 'primary', default: 'Click Me' },
-};
-
-export const Outline: Story = {
-  args: { variant: 'outline', default: 'Secondary Action' },
 };

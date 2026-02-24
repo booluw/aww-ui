@@ -2,13 +2,13 @@
   "name": "aww-ui",
   "version": "0.0.1",
   "type": "module",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "main": "./dist/aww-ui.umd.cjs",
   "module": "./dist/aww-ui.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.td",
       "import": "./dist/aww-ui.js",
       "require": "./dist/aww-ui.umd.cjs"
     },
@@ -50,6 +50,7 @@
     "storybook": "^10.2.10",
     "typescript": "~5.9.3",
     "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^4.0.18",
     "vue-tsc": "^3.1.5"
   },

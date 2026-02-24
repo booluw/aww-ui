@@ -1,3 +1,4 @@
+import { mergeConfig } from 'vite';
 import type { StorybookConfig } from '@storybook/vue3-vite';
 
 const config: StorybookConfig = {
@@ -12,6 +13,15 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
     "@storybook/addon-onboarding"
   ],
-  "framework": "@storybook/vue3-vite"
+  "framework": "@storybook/vue3-vite",
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      resolve: {
+        alias: {
+          '@': '/src',
+        },
+      },
+    });
+  },
 };
 export default config;

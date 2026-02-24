@@ -7,6 +7,12 @@
   --color-background: #ffffff;
   --color-foreground: #020817;
   --color-border: #e2e8f0;
+  --color-danger: #C50F1F;
+  --color-warning: #F7630C;
+  --color-success: #107C10;
+  --color-info: #616161;
+  --color-subtle: #EBEBEB;
+  --color-important: #242424;
   
   /* For Buttons */
   --color-primary-darker: color-mix(in oklab, var(--primary), black 5%);
@@ -25,6 +31,12 @@
 /* User-level overrides (Global Customization) */
 :root {
   --primary: var(--color-primary);
+  --danger: var(--color-danger);
+  --warning: var(--color-warning);
+  --succes: var(--color-success);
+  --info: var(--color-info);
+  --subtle: var(--color-subtle);
+  --important: var(--color-important);
 }
 
 .dark {

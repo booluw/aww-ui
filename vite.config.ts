@@ -2,20 +2,27 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import tailwindcss from '@tailwindcss/vite';
+import dts from 'vite-plugin-dts';
 import { resolve } from 'path';
-// https://vite.dev/config/
 
 export default defineConfig({
-  plugins: [vue(), tailwindcss()],
+  plugins: [
+    vue(),
+    tailwindcss(),
+    dts({
+      rollupTypes: true,
+      tsconfigPath: './tsconfig.app.json',
+      include: ['src/**/*.ts', 'src/**/*.vue'],
+    })
+  ],
   build: {
     lib: {
-      // The entry point for your library
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'AwwUI',
       fileName: 'aww-ui'
     },
     rollupOptions: {
-      // Ensure Vue and Reka aren't bundled into your library
+      // Ensure Vue and Reka aren't bundled
       external: ['vue', 'reka-ui'],
       output: {
         exports: 'named',
@@ -26,27 +33,4 @@ export default defineConfig({
       }
     }
   },
-  // test: {
-  //   projects: [{
-  //     extends: true,
-  //     plugins: [
-  //     // The plugin will run tests for the stories defined in your Storybook config
-  //     // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
-  //     storybookTest({
-  //       configDir: path.join(dirname, '.storybook')
-  //     })],
-  //     test: {
-  //       name: 'storybook',
-  //       browser: {
-  //         enabled: true,
-  //         headless: true,
-  //         provider: playwright({}),
-  //         instances: [{
-  //           browser: 'chromium'
-  //         }]
-  //       },
-  //       setupFiles: ['.storybook/vitest.setup.ts']
-  //     }
-  //   }]
-  // }
 });
