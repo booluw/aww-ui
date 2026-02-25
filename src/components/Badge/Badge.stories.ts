@@ -9,7 +9,7 @@ const meta: Meta<typeof ABadge> = {
     color: { control: 'select', options: ['brand', 'danger', 'warning', 'success', 'important', 'info', 'subtle'] },
     variant: { control: 'select', options: ['filled', 'tint', 'outline', 'subtle'] },
     position: { control: 'select', options: ['left', 'right'] },
-    size: { control: 'select', options: ['xs', 'sm', 'md']}
+    size: { control: 'select', options: ['sm', 'md', 'lg']}
   }
 }
 

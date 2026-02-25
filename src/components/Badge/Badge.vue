@@ -22,10 +22,10 @@ const props = withDefaults(defineProps<Props>(), {
 
 const iconSize = computed(() => {
   switch (props.size) {
-    case 'xs':
+    case 'sm':
       return '12px'
 
-    case 'sm':
+    case 'md':
       return '16px'
   
     default:

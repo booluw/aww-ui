@@ -25,9 +25,9 @@ export const badgeVariants = tv({
       left: ['flex-row']
     },
     size: {
-      xs: ['p-1 text-xs'],
-      sm: ['p-1.5 text-sm'],
-      md: ['p-2']
+      sm: ['p-1 text-xs'],
+      md: ['p-1.5 text-sm'],
+      lg: ['p-2']
     },
   },
   defaultVariants: {
