@@ -4,7 +4,7 @@ export const avatarVariants = tv({
   base: ['rounded-full inline-flex text-center justify-center items-center font-medium'],
   variants: {
     variant: {
-      img: [''],
+      img: ['object-cover'],
       initials: ['bg-[color-mix(in_oklab,var(--ui-avatar-color),white_90%)] text-(--ui-avatar-color)'],
       icon: ['bg-[color-mix(in_oklab,var(--ui-avatar-color),white_90%)] text-(--ui-avatar-color)'],
     },
